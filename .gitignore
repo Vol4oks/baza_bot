@@ -138,3 +138,6 @@ dmypy.json
 .idea/modules.xml
 .idea/vagrant.xml
 .idea/vcs.xml
+
+# folder with saved files
+user_documents/

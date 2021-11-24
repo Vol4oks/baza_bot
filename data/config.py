@@ -5,9 +5,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 BOT_TOKEN = str(os.getenv("BOT_TOKEN"))
-admins = [
-    362089194
-]
+admins = [340899114, ]
+users = [340899114, ]
 
 ip = os.getenv("ip")
 
