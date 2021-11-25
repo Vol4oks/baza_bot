@@ -141,3 +141,6 @@ dmypy.json
 
 # folder with saved files
 user_documents/
+
+# path
+start_bot.sh

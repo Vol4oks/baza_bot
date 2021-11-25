@@ -1,4 +1,19 @@
-За основу взят шаблон от https://github.com/Latand
+﻿За основу взят шаблон от https://github.com/Latand
+
+Настройка для авто запуска:
+    1) start_bot.sh - файл для запуска, вначале пропишите в нем нужные пути
+    2) chmod +x start_bot.sh - изменяем права доступа
+    3) sudo vim /etc/rc.local - открываем и пишем:
+
+                #!/bin/zsh 
+                [вашь путь]/start_bot.sh
+                /usr/sbin/mescripts
+                exit 0
+    
+    4)sudo chmod +x /etc/rc.local 
+    5)sudo reboot
+
+
 
 The template from is taken as a basis https://github.com/Latand
 
