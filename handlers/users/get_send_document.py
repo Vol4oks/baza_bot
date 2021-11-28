@@ -15,11 +15,6 @@ def list_users_dir(path):
 
 def user_path(message):
     return Path().joinpath("user_documents", f"{message.from_user.id}({message.from_user.full_name})")
-    if os.path.exists(path):
-        return path
-    else:
-        return None
-    
 
 @dp.message_handler(content_types=types.ContentType.DOCUMENT)
 async def downloader_document(message: types.Message):
@@ -36,7 +31,7 @@ async def downloader_document(message: types.Message):
         await message.answer(f"{ex}")
 
 
-@dp.message_handler(text='/info')
+@dp.message_handler(text='/infodoc')
 async def show_dir(message: types.Message):
     path_to_downloader = user_path(message)
     if os.path.exists(path_to_downloader):
@@ -45,14 +40,9 @@ async def show_dir(message: types.Message):
         await message.answer(f"Размер папки {dir_size}")
         
         r_file = 'файлы: \n'
-        r_dir = 'папки: \n'
         for i in dir_list:
-            if '.' in i:
-                r_file = r_file + i + '\n'
-            else:
-                r_dir = r_dir + i + '\n'
+            r_file = r_file + i + '\n'
                 
-        await message.answer(f"{r_dir}")
         await message.answer(f"{r_file}")
     else:
         await message.answer("У вас нет папки")
