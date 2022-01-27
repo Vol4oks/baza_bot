@@ -1,6 +1,4 @@
 from aiogram import types
-from aiogram.dispatcher.filters import Command
-from aiogram.types import message
 from loader import dp
 from pathlib import Path
 import os
